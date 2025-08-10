@@ -26,10 +26,10 @@ export default function App() {
 
   // fetch jokes once on mount
   useEffect(() => {
-    axios.get('https://students-db.onrender.com/')
-      .then(response => setJokes(response.data))
-      .catch(error => console.error('Error fetching jokes:', error))
-  }, [])
+axios.get('https://students-db.onrender.com/api/jokes')
+  .then(response => setJokes(response.data))
+  .catch(error => console.error('Error fetching jokes:', error));
+}, [])
 
   // setup captcha on mount and start countdown timer
   useEffect(() => {
