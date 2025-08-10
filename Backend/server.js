@@ -1,5 +1,8 @@
 import express from 'express';
 const app =express();
+app.use(cors({
+  origin: 'https://sd-sb8h.onrender.com/' // apne frontend ka Render URL daalo
+}));
 const port=process.env.PORT || 3000;
 app.get('/',(req,res)=>
 {

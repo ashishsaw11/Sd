@@ -26,7 +26,7 @@ export default function App() {
 
   // fetch jokes once on mount
   useEffect(() => {
-    axios.get('/api/jokes')
+    axios.get('https://students-db.onrender.com/')
       .then(response => setJokes(response.data))
       .catch(error => console.error('Error fetching jokes:', error))
   }, [])
